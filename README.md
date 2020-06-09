@@ -9,6 +9,9 @@ FUE = Flask+Vue(nuxt)
 - 后端：Flask
 - 数据库：MySQL
 
+### 无耻的要个Star
+老板，来都来了，给个star吧~
+
 ## 部署
 ### 后端
 1、准备工作
