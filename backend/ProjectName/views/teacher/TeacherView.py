@@ -4,17 +4,17 @@ from flask import jsonify
 from sqlalchemy.sql.expression import func
 
 from ...logger import logger
-from ...models.students import Students
+from ...models.teacher import Teacher
 from ...models import db
 
 
-students = Blueprint('students', __name__)  # 蓝图名称
+teacher = Blueprint('teacher', __name__) # 蓝图名称
 
 
-@students.route('/students', methods=['POST', 'GET'])
-def get_students_info():
+@students.route('/teacher', methods=['POST', 'GET'])
+def get_teacher_info():
     """
-    students 视图逻辑
+    teacher 视图逻辑
     """
     if request.method == 'GET':
         pass
