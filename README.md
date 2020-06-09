@@ -1,9 +1,9 @@
 <img src="frontend\lextool\static\tools.png" />
 <h1 align="left">FUE</h1>
-<p align="left">flask和vue的项目框架</p>
+<p align="left">flask和vue(nuxt)的项目框架</p>
 
 #### 说明
-FUE = Flask+Vue
+FUE = Flask+Vue(nuxt)
 #### 技术栈
 - 前端：vue全家桶 + nuxt
 - 后端：Flask
