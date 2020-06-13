@@ -11,21 +11,18 @@ __doc__ = r"""You can import local_config to this file"""
 
 
 try:
-    from .local_config import SQLALCHEMY_BINDS, SQLALCHEMY_DATABASE_URI, SECRET_KEY
+    from .local_config import *
 except ImportError:
-    SQLALCHEMY_BINDS = ''
-    SQLALCHEMY_DATABASE_URI = ''
-    SECRET_KEY = ''
     pass
 
 
 class DefaultConfig(object):
 
     # Default Database URI
-    SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI
+    SQLALCHEMY_DATABASE_URI = 'mysql://{username}:{password}@localhost:3306/{db}'.format(**Default_DB)
 
     # 需要绑定的多个数据库
-    SQLALCHEMY_BINDS = SQLALCHEMY_BINDS
+    SQLALCHEMY_BINDS = {'{db}'.format(**item):'mysql://{username}:{password}@localhost:3306/{db}'.format(**item) for item in BINDS_DB}
 
     # Secret Key for Token
     SECRET_KEY = SECRET_KEY
