@@ -32,7 +32,7 @@ FUE = Flask+Vue(nuxt)
 
 2、项目clone到服务器
 ```bash
-git clone git@github.com:Prolht/Tools.git
+git clone git@github.com:xx/xx.git
 ```
 
 3、运行
@@ -49,23 +49,21 @@ npm start
 
 4、pm2开启进程守护
 ```bash
-pm2 start npm --name lextool -- start
-# lextool 是项目名称 在package.json中
+pm2 start npm --name ProjectName -- start
+# ProjectName 是项目名称 在package.json中
 ```
 
 5、修改项目，重新打包，然后重新部署，则需要重新启动 pm2
 ```bash
-pm2 stop lextool   // 先停止
+pm2 stop ProjectName   // 先停止
 
-pm2 restart lextool  // 再重启
+pm2 restart ProjectName  // 再重启
 ```
 
-> 前端致敬 [MikuTools](https://tools.miku.ac/)
-
 ### 广告时间：
-Github：[https://github.com/Prolht](https://github.com/Prolht) 点个star哟！
+Github：[https://github.com/Prolht/FUE](https://github.com/Prolht/FUE) 点个star哟！
 
-个人博客：[https://www.lex666.online](https://www.lex666.online)
+个人站：[http://tools.lex666.online](http://tools.lex666.online)
 
 新浪微博： [https://weibo.com/u/2415026333](https://weibo.com/u/2415026333)
 
