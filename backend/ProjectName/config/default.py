@@ -21,11 +21,8 @@ class DefaultConfig(object):
     # Default Database URI
     SQLALCHEMY_DATABASE_URI = 'mysql://{username}:{password}@localhost:3306/{db}'.format(**Default_DB)
 
-    # 需要绑定的多个数据库
-    SQLALCHEMY_BINDS = {'{db}'.format(**item):'mysql://{username}:{password}@localhost:3306/{db}'.format(**item) for item in BINDS_DB}
-
     # Secret Key for Token
-    SECRET_KEY = SECRET_KEY
+    SECRET_KEY = SECRET_KEY if SECRET_KEY else '123456'
 
     # Cache(for file cache)
     FILESYSTEM = {

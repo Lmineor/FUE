@@ -1,6 +1,8 @@
+import datetime
+
 from werkzeug.security import generate_password_hash, check_password_hash # 转换密码用到的库
-from flask_security import UserMixin # 登录和角色需要继承的对象
-from itsdangerous import TimedJSONWebSignatureSerializer as SignatureExpired, BadSignature
+from flask_security import UserMixin
+from itsdangerous import BadSignature, SignatureExpired
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 
 from ..config.default import DefaultConfig
@@ -8,12 +10,13 @@ from ..models import db
 
 
 class User(db.Model, UserMixin):
-    __tablename__ = 'user' # 使用默认的数据库
+    __tablename__ = 'user'
     id = db.Column(db.Integer(), primary_key=True)
     username = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False, index=True)
     password_hash = db.Column(db.String(128))
-    memo = db.Column(db.Text)
+    create_at = db.Column(db.DateTime, default=datetime.datetime.now)
+    update_at = db.Column(db.DateTime, default=datetime.datetime.now)
 
     def __repr__(self):
         return "<User_id:{0}>".format(self.id)
