@@ -60,14 +60,4 @@ pm2 stop ProjectName   // 先停止
 pm2 restart ProjectName  // 再重启
 ```
 
-### 广告时间：
-Github：[https://github.com/Prolht/FUE](https://github.com/Prolht/FUE) 点个star哟！
-
-个人站：[http://tools.lex666.online](http://tools.lex666.online)
-
-新浪微博： [https://weibo.com/u/2415026333](https://weibo.com/u/2415026333)
-
-微信公众号：Pylexton
-<img src="https://yanxuan.nosdn.127.net/6d37e093859295a57cf7a1c9be5ad3b6.jpg" alt="" width="100" height="100" align="bottom" />
-欢迎关注！
 
